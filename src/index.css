@@ -27,6 +27,8 @@
 .imgContainer {
   display: flex;
   flex-direction: column;
+  max-height: 100vh;
+  width: 100%;
 }
 
 .bgImage {
@@ -38,6 +40,7 @@
 
 footer {
   position: fixed;
+  top: 85%;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -55,11 +58,13 @@ footer div {
 
 footer h2 {
   font-size: 1.4rem;
+  font-family: Space Grotesk;
 }
 
 footer h1 {
-  font-size: 0.9rem;
-  font-weight: 200;
+  font-size: 2rem;
+  font-weight: 2000;
+  font-family: 'Space Grotesk';
 }
 
 footer button {
@@ -114,7 +119,7 @@ footer button:hover {
   width: 80%;
   max-width: 800px;
   margin-left: auto;
-  background-color: #030615;
+  background: #030615;
 }
 
 .sidebarContents div {
@@ -129,11 +134,53 @@ footer button:hover {
   margin-right: auto;
   cursor: pointer;
   transition-duration: 200ms;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .sidebarContents button:hover {
   opacity: 0.7;
+}
+
+.sidebarContents h2 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  font-family: Space Grotesk;
+}
+
+.descriptionTitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-family: Space Grotesk;
+}
+
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: Space Grotesk;
+}
+
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+.loadingState i {
+  opacity: 0.2;
+  font-size: 3rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform:  rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @media (min-width: 640px) {
@@ -141,10 +188,18 @@ footer button:hover {
    position: relative;
    inset: unset;
    min-height: 30%;
+   max-width: 100vh;
    box-shadow: 0 0 40px 1px #030615; 
   }
 
   .sidebarContents {
     margin: unset;
+    width: 100%;
+  }
+
+  .bgOverlay {
+    right: 0;
+    left: unset;
+    width: 100vw;
   }
 }

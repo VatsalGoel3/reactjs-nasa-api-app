@@ -1,7 +1,7 @@
 export default function Main() {
     return (
-        <div>
-            <img src="spacex-mars.jpg" alt="Sample Picture" className="bgImage" />
+        <div className="imgContainer">
+            <img src="pexels-francesco-ungaro-998641.jpg" alt="Sample Picture" className="bgImage" />
         </div>
     )
 
